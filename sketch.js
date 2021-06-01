@@ -13,6 +13,7 @@ function preload(){
   green_balloonImage = loadImage("green_balloon0.png");
   pink_balloonImage = loadImage("pink_balloon0.png");
   blue_balloonImage = loadImage("blue_balloon0.png");
+  sound = loudSound("burst.mp3");
   
 }
 
@@ -78,6 +79,7 @@ function draw() {
     console.log(redB.x)
     arrowGroup.destroyEach();
     score = score + 1
+    sound.play();
   }
   if(redB.isTouching(rightB) && score != 0 ){
     score -= 5;
@@ -87,6 +89,7 @@ function draw() {
     greenB.destroyEach();
     arrowGroup.destroyEach();
     score = score + 2;
+    sound.play();
   }
   if(greenB.isTouching(rightB) && score != 0){
     score -= 5;
@@ -96,6 +99,7 @@ function draw() {
     blueB.destroyEach();
     arrowGroup.destroyEach();
     score = score + 3;
+    sound.play();    
   }
   if(blueB.isTouching(rightB) && score != 0){
     score -= 5;
@@ -105,6 +109,7 @@ function draw() {
     pinkB.destroyEach();
     arrowGroup.destroyEach();
     score = score + 4;   
+    sound.play();
   }
   if(pinkB.isTouching(rightB) && score != 0){
     score -= 5;
