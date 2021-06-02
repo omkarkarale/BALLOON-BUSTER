@@ -82,7 +82,7 @@ function draw() {
     sound.play();
   }
   if(redB.isTouching(rightB) && score != 0 ){
-    score -= 5;
+    score -= 1;
     redB.destroyEach();
   }
   if(arrowGroup.isTouching(greenB)){
@@ -92,7 +92,7 @@ function draw() {
     sound.play();
   }
   if(greenB.isTouching(rightB) && score != 0){
-    score -= 5;
+    score -= 2;
     greenB.destroyEach();
   }
   if(arrowGroup.isTouching(blueB)){
@@ -102,7 +102,7 @@ function draw() {
     sound.play();    
   }
   if(blueB.isTouching(rightB) && score != 0){
-    score -= 5;
+    score -= 3;
     blueB.destroyEach();
   }
   if(arrowGroup.isTouching(pinkB)){
@@ -112,7 +112,7 @@ function draw() {
     sound.play();
   }
   if(pinkB.isTouching(rightB) && score != 0){
-    score -= 5;
+    score -= 4;
     pinkB.destroyEach();
   }
     
